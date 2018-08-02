@@ -5,28 +5,25 @@
     build-mode="COLD"
     density="420dpi"
     format="10"
-    ir-eligibility="METHOD_ADDED"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.2.0-alpha11"
-    timestamp="1533184054136"
+    timestamp="1533190614340"
     token="4430345966713519019"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="101" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="214" />
+        duration="551" />
     <task
         name="verifier"
-        duration="78" />
+        duration="38" />
 
-    <artifact
-        location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-        type="SPLIT" />
     <artifact
         location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
@@ -77,12 +74,33 @@
     </build>
     <build
         build-mode="COLD"
-        ir-eligibility="METHOD_ADDED"
-        timestamp="1533184054136"
+        ir-eligibility="R_CLASS_CHANGE"
+        timestamp="1533190380677"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1533190614340"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
