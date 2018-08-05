@@ -1,7 +1,5 @@
 package com.ai.ally.githubclient.utils.rest
 
-import com.google.gson.FieldNamingPolicy
-import com.google.gson.GsonBuilder
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Call
@@ -15,7 +13,10 @@ import javax.net.ssl.SSLContext
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 import com.ai.ally.githubclient.BuildConfig
+import com.ai.ally.githubclient.models.NewTokenRequest
 import com.ai.ally.githubclient.models.Repositories
+import com.ai.ally.githubclient.models.NewTokenResponse
+import com.google.gson.*
 
 interface RestService {
 
@@ -75,6 +76,7 @@ interface RestService {
                     .baseUrl(BuildConfig.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create(
                             GsonBuilder()
+                                    .setLenient()
                                     .setFieldNamingStrategy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
                                     .create()))
                     .client(okClient)
@@ -84,7 +86,18 @@ interface RestService {
         }
     }
 
-    @GET("/orgs/octokit/repos")
+    @GET("/orgs/octokit/scopes")
     fun getExampleRest(): Call<MutableList<Repositories>>
+
+    @POST
+    fun getToken(@Url url: String,
+                 @Body requestModel: NewTokenRequest): Call<MutableList<NewTokenResponse>>
+
+    //Header is required because otherwise response body came as "access_token" and I don't see the value except in the debug bode
+    @POST
+    fun getAccessToken(@Url url: String,
+                       @Header("Accept") getAccessTokenHeader: String,
+                       @Body requestModel: NewTokenRequest): Call<JsonObject>
+
 
 }

@@ -12,4 +12,5 @@ public final class BuildConfig {
   public static final String VERSION_NAME = "1.0";
   // Fields from default config.
   public static final String BASE_URL = "https://api.github.com";
+  public static final String URL_TOKEN = "https://github.com/login/oauth/access_token";
 }

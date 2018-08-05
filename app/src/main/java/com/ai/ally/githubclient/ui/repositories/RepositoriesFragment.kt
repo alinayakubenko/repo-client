@@ -44,4 +44,5 @@ class RepositoriesFragment : BaseFragment(), RepositoriesView {
     override fun setDataToRecycler(reposList: MutableList<Repositories>) {
         // TODO create recycler + adapter and set list
     }
+
 }

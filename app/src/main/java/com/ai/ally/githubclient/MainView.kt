@@ -4,5 +4,6 @@ interface MainView {
 
     fun onDescriptionPage()
     fun onLogin()
+    fun onReposPage()
 
 }

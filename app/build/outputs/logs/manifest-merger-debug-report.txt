@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
+ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/ally/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1fe8b7a81642663a119ace97d7901f82/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/ally/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/57a95990581953febdc7cc1dd5651498/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-fragment:27.1.1] /Users/ally/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/e58f9a88335c97cdaecb055eec8df60d/AndroidManifest.xml:17:1-22:12
@@ -16,20 +16,20 @@ MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/ally/.gradle/cac
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/ally/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/03834bcf96519ddca3db7de92e9a598c/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/ally/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7e4396a517fe5660a01d336dfad76703/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] /Users/ally/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/7b77d9d887853027086b2ad2bd6a0929/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:3:5-39
 		INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
+		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
 		INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml
-		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-22:12
+		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:1-30:12
 		INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:2:11-69
@@ -38,7 +38,7 @@ ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidMa
 	android:name
 		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:6:5-20:19
+ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:6:5-28:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/ally/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/57a95990581953febdc7cc1dd5651498/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/ally/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/57a95990581953febdc7cc1dd5651498/AndroidManifest.xml:9:5-20
 	android:supportsRtl
@@ -54,7 +54,7 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/ally
 	android:theme
 		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:12:9-40
 activity#com.ai.ally.githubclient.MainActivity
-ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:13:9-19:20
+ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:13:9-27:20
 	android:name
 		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:13:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
@@ -67,6 +67,26 @@ category#android.intent.category.LAUNCHER
 ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:17:17-77
 	android:name
 		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:17:27-74
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:callback+data:scheme:aygithubclient
+ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:19:13-26:29
+action#android.intent.action.VIEW
+ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.DEFAULT
+ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:21:17-76
+	android:name
+		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:21:27-73
+category#android.intent.category.BROWSABLE
+ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:22:17-78
+	android:name
+		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:22:27-75
+data
+ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:23:17-25:55
+	android:host
+		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:24:21-44
+	android:scheme
+		ADDED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml:25:21-52
 uses-sdk
 INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/ally/AndroidStudioProjects/GitHubclient/app/src/main/AndroidManifest.xml
