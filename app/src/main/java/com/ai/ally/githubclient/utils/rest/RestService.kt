@@ -97,7 +97,7 @@ interface RestService {
     @POST
     fun getAccessToken(@Url url: String,
                        @Header("Accept") getAccessTokenHeader: String,
-                       @Body requestModel: NewTokenRequest): Call<JsonObject>
+                       @Body requestModel: NewTokenRequest): Call<NewTokenResponse>
 
 
 }
