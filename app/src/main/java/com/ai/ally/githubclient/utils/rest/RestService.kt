@@ -16,6 +16,7 @@ import com.ai.ally.githubclient.BuildConfig
 import com.ai.ally.githubclient.models.NewTokenRequest
 import com.ai.ally.githubclient.models.Repositories
 import com.ai.ally.githubclient.models.NewTokenResponse
+import com.ai.ally.githubclient.models.Owner
 import com.google.gson.*
 
 interface RestService {
@@ -98,6 +99,11 @@ interface RestService {
     fun getAccessToken(@Url url: String,
                        @Header("Accept") getAccessTokenHeader: String,
                        @Body requestModel: NewTokenRequest): Call<NewTokenResponse>
+
+    @GET ("/user")
+    fun getOwner(@Header("Authorization") tokenToken: String): Call<Owner>
+
+
 
 
 }

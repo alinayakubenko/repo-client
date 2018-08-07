@@ -15,6 +15,7 @@ import android.util.Log
 import android.widget.Toast
 import com.ai.ally.githubclient.models.NewTokenRequest
 import com.ai.ally.githubclient.models.NewTokenResponse
+import com.ai.ally.githubclient.models.Owner
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -96,6 +97,21 @@ class MainActivity : AppCompatActivity(), MainView {
                                 sp.edit().putString("oauth.loggedin", "true").apply()
                                 Log.i("LOG", "Token: "+ it.accessToken)
                                 onReposPage()
+
+                                Rest.retrofit.getOwner("token "+(sp.getString("access_token",""))).enqueue(object : Callback<Owner>{
+                                    override fun onFailure(call: Call<Owner>?, t: Throwable?) {
+                                        Log.i("LOG", "Get Owner failed with: "+ t.toString())
+                                    }
+
+                                    override fun onResponse(call: Call<Owner>?, response: Response<Owner>?) {
+                                        if (response?.body() != null) {
+                                            response.body()?.let {
+                                                sp.edit().putString("user_login", it.login).apply()
+                                                Log.i("LOG", "Username: "+ it.login)
+                                            }
+                                        }
+                                    }
+                                })
                             }
                         }
                     }
