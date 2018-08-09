@@ -14,7 +14,7 @@ import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 import com.ai.ally.githubclient.BuildConfig
 import com.ai.ally.githubclient.models.NewTokenRequest
-import com.ai.ally.githubclient.models.Repositories
+import com.ai.ally.githubclient.models.Repository
 import com.ai.ally.githubclient.models.NewTokenResponse
 import com.ai.ally.githubclient.models.Owner
 import com.google.gson.*
@@ -87,12 +87,15 @@ interface RestService {
         }
     }
 
-    @GET("/orgs/octokit/scopes")
-    fun getExampleRest(): Call<MutableList<Repositories>>
+    @GET ("/search/repositories")
+    fun getRepos(@Query("q=user:") username: String, @Query ("language") language: String, @Query ("sort") sort: String): Call<MutableList<Repository>>
 
-    @POST
-    fun getToken(@Url url: String,
-                 @Body requestModel: NewTokenRequest): Call<MutableList<NewTokenResponse>>
+    /*
+    @GET ("/search/repositories")
+    fun getRepos(@Query("q") username: String): Call<MutableList<Repository>> */
+
+    @GET
+    fun getRepositories(@Url url: String): Call<MutableList<Repository>>
 
     //Header is required because otherwise response body came as "access_token" and I don't see the value except in the debug bode
     @POST

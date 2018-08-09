@@ -1,19 +1,21 @@
 package com.ai.ally.githubclient.ui.repositories
 
+import android.util.Log
 import com.ai.ally.githubclient.base.BasePresenter
 import com.ai.ally.githubclient.base.ResultListener
-import com.ai.ally.githubclient.models.Repositories
+import com.ai.ally.githubclient.models.Repository
 import com.ai.ally.githubclient.utils.rest.Rest
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
 class RepositoriesPresenter : BasePresenter<RepositoriesView>() {
 
-    private lateinit var reposList: MutableList<Repositories>
+    private lateinit var reposList: MutableList<Repository>
+    lateinit var repoUrl: String
 
     override fun onViewCreated() {
-
         // if ("some data available in the DB") { }
         // else  { loadRepos }
 
@@ -34,23 +36,25 @@ class RepositoriesPresenter : BasePresenter<RepositoriesView>() {
 
     private fun loadRepos(listener: ResultListener) {
 
-        Rest.retrofit.getExampleRest().enqueue(object : Callback<MutableList<Repositories>> {
-            override fun onFailure(call: Call<MutableList<Repositories>>, t: Throwable) {
+        //  Unable to retrieve data to the model. Getting "Unresolved reference: response" error on request below, need to come up with and idea why and how to fix it.
+        Rest.retrofit.getRepositories(repoUrl).enqueue(object : Callback<MutableList<Repository>> {
+            override fun onFailure(call: Call<MutableList<Repository>>, t: Throwable) {
                 listener.onFailureResult(t.message)
+                Log.i("LOG", "Username loadRepos FAILED: "+ t.message)
             }
-
-            override fun onResponse(call: Call<MutableList<Repositories>>, response: Response<MutableList<Repositories>>) {
-                if (response.isSuccessful && response.body() != null) {
+            override fun onResponse(call: Call<MutableList<Repository>>?, response: Response<MutableList<Repository>>?) {
+                if (response?.body() != null) {
                     response.body()?.let {
-                        reposList = it
+//                        reposList = it
+                        Log.i("LOG", "Username loadRepos Response: "+ repoUrl)
+                        Log.i("LOG", "loadRepos Response Headers: "+ it[0].id)
+                        Log.i("LOG", "loadRepos Response Body: "+ it[0].name)
 
-                        // for example
-                        println(reposList[0].id)
-                        println(reposList[0].name)
-                        println(reposList[0].owner?.id)
-                        println(reposList[0].owner?.login)
-                        println(reposList[0].owner?.type)
-                        // for example
+                        println(it[0].id)
+                        println(it[0].name)
+                      //  println(reposList[0].owner?.login)
+                       // println(reposList[0].owner?.type)
+                        Log.i("LOG", "REPO NAME 0: "+ it[0].name)
                         listener.onSuccessResult()
                     }
                 }

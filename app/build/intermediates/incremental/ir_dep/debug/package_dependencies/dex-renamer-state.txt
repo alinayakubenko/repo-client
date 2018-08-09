@@ -1,4 +1,4 @@
-#Tue Aug 07 00:25:21 CDT 2018
+#Wed Aug 08 23:57:11 CDT 2018
 base.0=/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/transforms/dexMerger/debug/10
 path.0=classes.dex
 renamed.0=classes.dex

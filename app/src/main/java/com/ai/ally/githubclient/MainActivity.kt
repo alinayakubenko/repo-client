@@ -16,6 +16,7 @@ import android.widget.Toast
 import com.ai.ally.githubclient.models.NewTokenRequest
 import com.ai.ally.githubclient.models.NewTokenResponse
 import com.ai.ally.githubclient.models.Owner
+import com.ai.ally.githubclient.models.Repository
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,8 +28,8 @@ class MainActivity : AppCompatActivity(), MainView {
 
     // TODO globally:
     // TODO mandatory
-    // TODO Move all hardcoded strings to resource file
-    // TODO add functionality presenting sorted and grouped repos
+    // TODO Move all hardcoded strings to resource file or constants
+    // TODO add functionality for viewing sorted and grouped repos
     // TODO add details for chosen repo
     // TODO add unit tests
 
@@ -38,6 +39,8 @@ class MainActivity : AppCompatActivity(), MainView {
 
     private lateinit var token: JsonObject
     lateinit var sp: SharedPreferences
+    lateinit var userResponce: Owner
+    lateinit var reposResponce: MutableList<Repository>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +72,7 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     override fun onReposPage() {
-        replaceFragment(RepositoriesFragment.newInstance(RepositoriesPresenter()), RepositoriesFragment.javaClass.canonicalName)
+        replaceFragment(RepositoriesFragment.newInstance(RepositoriesPresenter(), getUserRepoUrl()), RepositoriesFragment.javaClass.canonicalName)
     }
 
     private fun replaceFragment(fragment: BaseFragment, tag: String) {
@@ -96,7 +99,6 @@ class MainActivity : AppCompatActivity(), MainView {
                                 sp.edit().putString("access_token", it.accessToken).apply()
                                 sp.edit().putString("oauth.loggedin", "true").apply()
                                 Log.i("LOG", "Token: "+ it.accessToken)
-                                onReposPage()
 
                                 Rest.retrofit.getOwner("token "+(sp.getString("access_token",""))).enqueue(object : Callback<Owner>{
                                     override fun onFailure(call: Call<Owner>?, t: Throwable?) {
@@ -106,8 +108,11 @@ class MainActivity : AppCompatActivity(), MainView {
                                     override fun onResponse(call: Call<Owner>?, response: Response<Owner>?) {
                                         if (response?.body() != null) {
                                             response.body()?.let {
-                                                sp.edit().putString("user_login", it.login).apply()
-                                                Log.i("LOG", "Username: "+ it.login)
+                                                userResponce = it
+                                                sp.edit().putString("user_login", userResponce.login).apply()
+                                                sp.edit().putString("repos_url", userResponce.reposUrl).apply()
+                                                Log.i("LOG", "Username from userResponseLogin: "+ userResponce.reposUrl)
+                                                onReposPage()
                                             }
                                         }
                                     }
@@ -124,5 +129,15 @@ class MainActivity : AppCompatActivity(), MainView {
 
     override fun onDestroy() {
         super.onDestroy()
+    }
+
+    fun getUsername(): String{
+        val userName = sp.getString("user_login", "")
+        return userName
+    }
+
+    fun getUserRepoUrl(): String{
+        val repoUrl = sp.getString("repos_url","")
+        return repoUrl
     }
 }
