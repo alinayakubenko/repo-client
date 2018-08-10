@@ -13,10 +13,7 @@ import javax.net.ssl.SSLContext
 import javax.net.ssl.TrustManager
 import javax.net.ssl.X509TrustManager
 import com.ai.ally.githubclient.BuildConfig
-import com.ai.ally.githubclient.models.NewTokenRequest
-import com.ai.ally.githubclient.models.Repository
-import com.ai.ally.githubclient.models.NewTokenResponse
-import com.ai.ally.githubclient.models.Owner
+import com.ai.ally.githubclient.models.*
 import com.google.gson.*
 
 interface RestService {

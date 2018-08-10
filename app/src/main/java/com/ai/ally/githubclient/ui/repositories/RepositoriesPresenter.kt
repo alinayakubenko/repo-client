@@ -45,14 +45,14 @@ class RepositoriesPresenter : BasePresenter<RepositoriesView>() {
             override fun onResponse(call: Call<MutableList<Repository>>?, response: Response<MutableList<Repository>>?) {
                 if (response?.body() != null) {
                     response.body()?.let {
-//                        reposList = it
+                       reposList = it
                         Log.i("LOG", "Username loadRepos Response: "+ repoUrl)
-                        Log.i("LOG", "loadRepos Response Headers: "+ it[0].id)
-                        Log.i("LOG", "loadRepos Response Body: "+ it[0].name)
+                        Log.i("LOG", "loadRepos Response Headers: "+ reposList[0].id)
+                        Log.i("LOG", "loadRepos Response Body: "+ reposList[0].name)
 
-                        println(it[0].id)
-                        println(it[0].name)
-                      //  println(reposList[0].owner?.login)
+                        println(reposList[0].id)
+                        println(reposList[0].name)
+                       //  println(reposList[0].owner?.login)
                        // println(reposList[0].owner?.type)
                         Log.i("LOG", "REPO NAME 0: "+ it[0].name)
                         listener.onSuccessResult()
