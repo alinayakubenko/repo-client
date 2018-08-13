@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Aug 08 23:57:14 CDT 2018
+#Sun Aug 12 14:04:53 CDT 2018
 1.base=/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/transforms/dexMerger/debug/12
 2.path=classes.dex
 0.baseType=DIRECTORY

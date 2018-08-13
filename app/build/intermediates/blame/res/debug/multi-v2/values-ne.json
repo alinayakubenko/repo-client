@@ -4,7 +4,7 @@
             "outputFile": "/Users/ally/AndroidStudioProjects/GitHubclient/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ne/values-ne.xml",
             "map": [
                 {
-                    "source": "/Users/ally/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/bfad14dfc49a2a02c46080080c2ce03c/res/values-ne/values-ne.xml",
+                    "source": "/Users/ally/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/eefa42780c5492472658ee6971686c4c/res/values-ne/values-ne.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ally/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/1fe8b7a81642663a119ace97d7901f82/res/values-ne/values-ne.xml",
+                    "source": "/Users/ally/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4ee65a4fc039990951d1e2dc631ddad5/res/values-ne/values-ne.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
